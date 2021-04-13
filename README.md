@@ -3,10 +3,11 @@
 I had this https://bbs.archlinux.org/viewtopic.php?id=257114 problem and 
 this https://bbs.archlinux.org/viewtopic.php?pid=1917633#p1917633 solution helped me.
 
-I wrote that script because I needed to compile and reinstall the network-driver everytime I updated my arch-linux.
+I wrote that script because I needed to compile and reinstall the network-driver everytime I updated my linux kernels (linux, linux-lts, zen).
 This script works only on an already installed system. 
 
-You can clone this project and with `python3 main.py` it will install the r8125 network driver.
+You can clone this project and with `python3 update-network-driver-r8125.py` it will install the r8125 network driver.
+Or you can put this folder in your `~/.bashrc`, `chmod +x update-network-driver-r8125.py` and just run it like any other script.
 
 Here is a guide if you are on an live-iso and your network-driver isn't loaded.
  
@@ -50,4 +51,4 @@ Follow these steps (the disk mount part is for both machines):
     You need to do step 3 again with some steps afterwards:
     - `sudo bash -c 'echo "blacklist [wrong_module]" > /etc/modprobe.d/[wrong_module].conf'` blacklist the wrong module from boot
     - `sudo bash -c 'echo "r8125" > /etc/modules-load.d/r8125.cfg'` Only forces the module to load on boot
-    - `sudo reboot now` reboot to check if the module is loaded
+    - `sudo reboot` reboot to check if the module is loaded

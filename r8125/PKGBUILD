@@ -16,7 +16,7 @@ sha256sums=('75196ec98afcefbb6706307104d32131a27abba24ac333633790264968d548d6'
             '7a6b42b6ebbd76ae3c40e10f824c2dae88448fab3ba074916b3be5c2b4bef448')
 
 build() {
-  _kernver='5.4.70-1-lts'
+  _kernver='5.4.98-1-lts'
 
   tar -xf "${pkgver}.tar.gz"
   cd "${_pkgbase}-${pkgver}"/src
@@ -25,7 +25,7 @@ build() {
 
 package_r8125() {
   # Install
-  _kernver='5.4.70-1-lts'
+  _kernver='5.4.98-1-lts'
 
   msg2 "Starting make install..."
   install -Dt "${pkgdir}/usr/lib/modules/${_kernver}/extramodules" -m644 "${_pkgbase}-${pkgver}/src/r8125.ko"
