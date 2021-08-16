@@ -1,4 +1,4 @@
-#Check Network Driver for RTL8125 2.5GbE Controller - Arch Linux
+# Check Network Driver for RTL8125 2.5GbE Controller - Arch Linux
 
 I had this https://bbs.archlinux.org/viewtopic.php?id=257114 problem and 
 this https://bbs.archlinux.org/viewtopic.php?pid=1917633#p1917633 solution helped me.
@@ -9,7 +9,7 @@ This script works only on an already installed system.
 You can clone this project and with `python3 update-network-driver-r8125.py` it will install the r8125 network driver.
 Or you can put this folder in your `~/.bashrc`, `chmod +x update-network-driver-r8125.py` and just run it like any other script.
 
-Here is a guide if you are on an live-iso and your network-driver isn't loaded.
+Here is a guide if you are on a live-iso and your network-driver isn't loaded.
  
 Because I had no internet connection I booted Arch from another USB on my laptop and used an external SSD.
 (Or you can boot Windows and do all this in a vm if you don't have another devices.)
@@ -20,7 +20,7 @@ Follow these steps (the disk mount part is for both machines):
     - `nano /etc/fstab` and write in that `/dev/[your device-partition]   [Path like /media/ssd]  auto    auto    0   0`
     - `mkdir [path where you want to mount like /media/ssd]` and `mount [your device-partition] [path]` To mount and use the external ssd
     
-2. Download and compile on laptop with working network connection
+2. **Download and compile on laptop with working network connection**
     - `pacman -S git gcc make fakeroot curl` Download the necessary dependencies
     - `useradd -G wheel -s /bin/bash username` to create non root user
     - `EDITOR=nano visudo` uncomment the line `%wheel ALL=(ALL) ALL` and save to be sudo
