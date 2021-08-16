@@ -65,23 +65,7 @@ if __name__ == '__main__':
     if version is None:
         print("No need for updating the Network Driver")
     else:
-        print(f"Update {version} found. Install now?")
-        choice = input().lower()
-        if choice == "j" or choice == "y":
-            print("Started updating network driver")
-            update_network_drivers(version)
-            print("Finished... \nWrite config?")
-            config = input().lower()
-            if config == "j" or config == "y":
-                print("Write config...")
-                write_configs()
-                print("All Tasks finished. Reboot now to apply changes?")
-                reboot = input().lower()
-                if reboot == "j" or reboot == "y":
-                    subprocess_cmd("systemctl reboot")
-                else:
-                    print("Exit Script. Reboot to confirm.")
-                exit()
-        else:
-            print("Exit script....")
-            exit()
+        print(f"Update {version} found.\nInstalling...\n")
+        update_network_drivers(version)
+        print("Finished... \nWrite config?")
+        # write_configs()
