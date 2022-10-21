@@ -1,3 +1,5 @@
+# [Outdated / Not maintained / Not needed anymore]
+
 # Check Network Driver for RTL8125 2.5GbE Controller - Arch Linux
 
 I had this https://bbs.archlinux.org/viewtopic.php?id=257114 problem and 
